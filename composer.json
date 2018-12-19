@@ -1,0 +1,41 @@
+{
+    "name": "hbliang/laravel-countable",
+    "description": "Laravel Countable",
+    "type": "library",
+    "authors": [
+        {
+            "name": "hbliang",
+            "email": "ishaobinliang@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hbliang\\LaravelCountable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hbliang\\LaravelCountable\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hbliang\\LaravelCountable\\CountableServiceProvider"
+            ],
+            "aliases": {
+                "Countable": "Hbliang\\LaravelCountable\\CountableFacade"
+            }
+        }
+    },
+    "require": {
+        "illuminate/support": "^5.7",
+        "predis/predis": "^1.1",
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4",
+        "orchestra/testbench": "~3.0"
+    }
+}
